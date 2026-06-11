@@ -2687,8 +2687,8 @@ form#contactForm {
   .sticky-whatsapp{
     position: fixed;
     right: -70px; /* sticks to border */
-    display: none;
-    top: 50%;
+    /* display: none; */
+    top: 80%;
   }
   .sticky-whatsapp:hover{
     right: -70px; /* sticks to border */
