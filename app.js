@@ -37,11 +37,9 @@
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-11.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-12.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-13.webp',
-    'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-14.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-15.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-16.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-17.webp',
-    'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-18.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-19.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-20.webp',
     'https://media-idealcoffeemachines.s3.ap-south-1.amazonaws.com/website/Ideal+Client/brand-img-21.webp',
@@ -62,7 +60,7 @@
       )
       .join("");
   }
-  
+
   /* Burger / Drawer */
   const burger = document.getElementById("burger");
   const drawer = document.getElementById("drawer");
@@ -234,37 +232,37 @@ xpPopup.addEventListener("click", (e) => {
 
 /* =========================================================== */
 
-(function(){
+(function () {
   var popup = document.getElementById('popup');
   var backdrop = document.getElementById('popupBackdrop');
   var closeBtn = document.getElementById('popupClose');
   var form = document.getElementById('popupForm');
   var success = document.getElementById('popupSuccess');
 
-  function openPopup(){
+  function openPopup() {
     popup.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
   window.openPopup = openPopup;
 
-  function closePopup(){
+  function closePopup() {
     popup.classList.remove('active');
     document.body.style.overflow = '';
   }
 
   closeBtn.addEventListener('click', closePopup);
   backdrop.addEventListener('click', closePopup);
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closePopup(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopup(); });
 
-  form.addEventListener('submit', function(e){
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
     var valid = true;
     var fields = form.querySelectorAll('[required]');
-    for(var i = 0; i < fields.length; i++){
-      if(!fields[i].value.trim()){ valid = false; fields[i].style.borderColor = '#C5503D'; }
+    for (var i = 0; i < fields.length; i++) {
+      if (!fields[i].value.trim()) { valid = false; fields[i].style.borderColor = '#C5503D'; }
       else { fields[i].style.borderColor = ''; }
     }
-    if(valid){
+    if (valid) {
       form.style.display = 'none';
       success.hidden = false;
     }
@@ -278,7 +276,7 @@ xpPopup.addEventListener("click", (e) => {
 const trustGrid = document.querySelector(".trust-grid");
 const trustDots = document.querySelectorAll(".trust-dots span");
 
-if(trustGrid){
+if (trustGrid) {
 
   trustGrid.addEventListener("scroll", () => {
 
@@ -290,7 +288,7 @@ if(trustGrid){
 
       const rect = card.getBoundingClientRect();
 
-      if(rect.left >= 0 && rect.left < window.innerWidth / 2){
+      if (rect.left >= 0 && rect.left < window.innerWidth / 2) {
         index = i;
       }
 
@@ -298,7 +296,7 @@ if(trustGrid){
 
     trustDots.forEach(dot => dot.classList.remove("active"));
 
-    if(trustDots[index]){
+    if (trustDots[index]) {
       trustDots[index].classList.add("active");
     }
 
